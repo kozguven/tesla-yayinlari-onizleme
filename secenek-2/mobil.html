@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tesla Yayınları, Seçenek 2: telefon görünümü</title>
+<meta name="description" content="Sınav Merkezi tasarımının telefondaki sekiz ekranı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.mb{--s:.6347;background:var(--panel);padding:40px 0 80px}
+.mb-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.mb-hd h1{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.5rem)}
+.mb-hd p{margin:10px 0 0;color:var(--ink-2);max-width:640px}
+.mb-page{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px;justify-items:center;margin-bottom:28px}
+.ph{margin:0;display:flex;flex-direction:column;align-items:center;gap:12px;break-inside:avoid;page-break-inside:avoid}
+.ph-frame{padding:10px;border-radius:40px;background:#0B1A2C;box-shadow:0 24px 50px -22px rgba(13,27,44,.55)}
+.ph-scr{width:calc(375px * var(--s));height:calc(812px * var(--s));border-radius:30px;overflow:hidden;background:#fff;position:relative}
+.ph-scr iframe{width:375px;height:812px;border:0;transform:scale(var(--s));transform-origin:0 0;display:block}
+.ph figcaption{text-align:center;max-width:260px}
+.ph figcaption b{display:block;font-size:15.5px}
+.ph figcaption span{font-size:13.5px;color:var(--muted)}
+.ph .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;background:var(--volt);color:var(--volt-ink);font-weight:800;font-size:13px;margin-right:6px;vertical-align:1px}
+.mb-top{background:var(--navy);padding:14px 0}
+.mb-top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mb-top a{color:#fff;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:1100px){.mb-page{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.mb-page{grid-template-columns:1fr}.mb{--s:.72}}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  html,body{background:#fff}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .screens,.mb-top{display:none !important}
+  .mb{--s:.61;padding:0;background:#fff}
+  .mb-hd{margin:0 0 6mm}
+  .mb-hd h1{font-size:20pt}
+  .mb-hd p{font-size:10pt}
+  .mb-page{grid-template-columns:repeat(4,1fr);gap:0 4mm;margin:0;break-after:page;page-break-after:always}
+  .mb-page:last-of-type{break-after:auto;page-break-after:auto}
+  .mb-page.p2{padding-top:10mm}
+  .ph-frame{box-shadow:none;padding:8px;border-radius:34px}
+  .ph-scr{border-radius:26px}
+  .ph figcaption b{font-size:11pt}
+  .ph figcaption span{font-size:9pt}
+  .ph{gap:8px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol><symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol><symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol><symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9.2 8.2c-.4 2.9 3 6.6 6.4 6.4l.8-1.5-2-1-.9.8a4.6 4.6 0 0 1-2.4-2.4l.8-.9-1-2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol><symbol id="i-bld" viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 8h8v13M8 8v.01M8 12v.01M8 16v.01M16 12v.01M16 16v.01M2 21h20"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol><symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/></symbol><symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M12 16v4M8 20h8"/></symbol><symbol id="i-mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M3 9h18M9 20v-6h6v6"/></symbol><symbol id="i-optik" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="9" cy="8" r="1.3"/><circle cx="15" cy="8" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="9" cy="16" r="1.3"/><circle cx="15" cy="16" r="1.3"/></symbol><symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol><symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></symbol><symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"/></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></symbol><symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="i-logo" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h5"/><circle cx="15" cy="16" r="2.5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol><symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3"/><rect x="7" y="14" width="10" height="7"/></symbol><symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/></symbol><symbol id="i-lib" viewBox="0 0 24 24"><path d="M4 4h4v16H4zM10 4h4v16h-4zM16 5l3.5-1 2.5 15.5-3.5 1z"/></symbol><symbol id="i-bolt" viewBox="0 0 16 24"><path d="M10 1L1 14h6l-2 9 10-14H9z"/></symbol></svg>
+<div class="mb-top"><div class="wrap"><a href="index.html"><img src="../assets/img/logo/logo-white.png" alt="Tesla Yayınları" width="182" height="44" style="height:38px;width:auto"></a><a href="index.html">Masaüstü görünüme dön</a></div></div>
+<main class="mb" id="main">
+  <div class="wrap">
+    <div class="mb-hd"><div><h1>Seçenek 2, Sınav Merkezi: telefonda</h1><p>Ziyaretçilerin çoğu siteye telefondan giriyor. Arama çubuğu her ekranda üstte sabit; deneme, cevap anahtarı ve bayi en fazla iki dokunuş uzakta.</p></div></div>
+    <div class="mb-page"><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="index.html" title="Ana sayfa ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">1</span>Ana sayfa</b><span>Slogan, sınıf seçici ve canlı deneme panosu ilk ekranda.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="index.html?menu=1" title="Menü açık ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">2</span>Menü açık</b><span>Tam ekran menü; ürünler açılır listesi, kurum girişi ve WhatsApp.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="urunler.html?filtre=1" title="Ürün kataloğu ve filtre ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">3</span>Ürün kataloğu ve filtre</b><span>Kademe sekmeleri; filtreler alttan açılan panelde.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="urun.html" title="Ürün detayı ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">4</span>Ürün detayı</b><span>Set galerisi, fiyat, adet seçici ve bayiden al düğmesi.</span></figcaption></figure></div>
+    <div class="mb-page p2"><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="denemeler.html" title="Deneme takvimi ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">5</span>Deneme takvimi</b><span>Her deneme için cevap anahtarı, konu analiz ve FMT indirme.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="teknoloji.html?bolum=karne" title="Yapay zekâ karnesi ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">6</span>Yapay zekâ karnesi</b><span>Ders bazlı başarı çubukları ve kişisel çalışma önerisi.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="bayiler.html" title="Bayi bul ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">7</span>Bayi bul</b><span>İl seçimi, bayi listesi, arama ve yol tarifi düğmeleri.</span></figcaption></figure><figure class="ph"><div class="ph-frame"><div class="ph-scr"><iframe src="iletisim.html" title="İletişim ve WhatsApp ekranı, telefon görünümü" loading="eager" tabindex="-1"></iframe></div></div><figcaption><b><span class="n num">8</span>İletişim ve WhatsApp</b><span>Tek dokunuşla WhatsApp, arama, e-posta ve form.</span></figcaption></figure></div>
+  </div>
+</main>
+<details class="screens">
+  <summary><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>Ekranlar</summary>
+  <div class="screens-list"><p>Seçenek 2: Sınav Merkezi</p><ol><li><a href="index.html">Ana sayfa</a></li><li><a href="urunler.html">Ürün kataloğu</a></li><li><a href="urun.html">Ürün detayı</a></li><li><a href="denemeler.html">Deneme takvimi</a></li><li><a href="kurumsal.html">Kurumlara özel</a></li><li><a href="teknoloji.html">Eğitim teknolojileri</a></li><li><a href="yayinlarimiz.html">Yayınlarımız</a></li><li><a href="bayiler.html">Bayi bul</a></li><li><a href="iletisim.html">İletişim</a></li><li><a href="mobil.html" aria-current="page">Mobil görünüm</a></li></ol><a class="back" href="../index.html">Tüm seçeneklere dön</a></div>
+</details>
+<script src="app.js"></script>
+</body>
+</html>

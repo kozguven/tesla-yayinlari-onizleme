@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tesla Yayınları — Yeni Web Sitesi Ön Tasarımı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2024;--muted:#5D6570;--line:#E3E6EA;--bg:#FFFFFF;--soft:#F4F6F7;--accent:#E2562A;--accent-d:#B9421C}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;font-size:14px;color:var(--muted)}
+header b{color:var(--ink)}
+.intro{padding:48px 0 28px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.12;font-weight:800;letter-spacing:-.02em;max-width:18ch}
+.intro p{margin-top:16px;max-width:62ch;color:var(--muted);font-size:18px}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:18px 0 40px}
+.opt{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+.opt .shot{display:block;aspect-ratio:3/4;overflow:hidden;background:var(--soft);border-bottom:1px solid var(--line)}
+.opt .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.opt .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.opt h2{font-size:22px;line-height:1.2}
+.opt h2 small{display:block;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:2px}
+.opt p{color:var(--muted);font-size:15.5px}
+.sw{display:flex;gap:6px;margin-top:2px}
+.sw i{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.1);display:block}
+.btn{display:flex;justify-content:center;align-items:center;min-height:48px;border-radius:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;margin-top:auto}
+.btn:hover{background:#000}
+.screens{font-size:14px;display:flex;flex-wrap:wrap;gap:6px}
+.screens a{padding:6px 10px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--muted)}
+.screens a:hover{border-color:var(--ink);color:var(--ink)}
+section.block{padding:36px 0;border-top:1px solid var(--line)}
+section.block h2{font-size:26px;margin-bottom:14px}
+ol.steps{padding-left:22px;display:grid;gap:10px;max-width:70ch}
+ol.steps li::marker{font-weight:800;color:var(--accent-d)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.note{background:var(--soft);border-radius:12px;padding:18px 20px;color:var(--ink);font-size:16px}
+.note ul{padding-left:20px;display:grid;gap:6px;margin-top:8px;color:var(--muted)}
+.pdf{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px;border-radius:10px;border:2px solid var(--ink);text-decoration:none;font-weight:700;margin-top:6px}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:14px}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:900px){.opts{grid-template-columns:1fr}.opt .shot{aspect-ratio:4/3}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><span><b>Ön tasarım rehberi</b> · teslayayinlari.com.tr</span><span>Hazırlayan: Webizmo</span></div></header>
+<main class="wrap">
+  <div class="intro">
+    <h1>teslayayinlari.com.tr için üç premium tasarım hazırladık</h1>
+    <p>Beytullah Bey, üç seçeneğin her biri Tesla Yayınları'nın yeni web sitesinin farklı bir yüzü. Mevcut sitenizdeki metinleri, gerçek kitap kapaklarınızı, fiyatlarınızı ve altı yayın markanızın logosunu kullandık. Her seçenekte ana sayfadan ürün kataloğuna, deneme takviminden bayi bulucuya kadar on ekran var; hepsi tıklanabilir, telefondan ya da bilgisayardan gezebilirsiniz.</p>
+  </div>
+
+  <div class="opts">
+    <article class="opt">
+      <a class="shot" href="secenek-1/index.html"><img src="thumbs/secenek-1.jpg" alt="Seçenek 1 ana sayfa görünümü"></a>
+      <div class="body">
+        <h2><small>Seçenek 1</small>Kütüphane · Köklü ve güvenilir</h2>
+        <p>Ağırbaşlı, editoryal bir yayınevi yüzü. Gerçek kapaklarınız lacivert bir kitaplığın raflarında diziliyor; logonuzdaki lacivert ana renk, kepteki altın sarısı yalnızca vurgu. Okul yöneticisine ve veliye ciddiyet ve güven verir.</p>
+        <div class="sw" aria-label="Renkler"><i style="background:#16324F"></i><i style="background:#C9A227"></i><i style="background:#FBFAF7"></i><i style="background:#E8EDF3"></i></div>
+        <div class="screens"><a href="secenek-1/urunler.html">Katalog</a><a href="secenek-1/urun.html">Ürün</a><a href="secenek-1/denemeler.html">Denemeler</a><a href="secenek-1/mobil.html">Telefon</a></div>
+        <a class="btn" href="secenek-1/index.html">Seçenek 1'i incele</a>
+      </div>
+    </article>
+    <article class="opt">
+      <a class="shot" href="secenek-2/index.html"><img src="thumbs/secenek-2.jpg" alt="Seçenek 2 ana sayfa görünümü"></a>
+      <div class="body">
+        <h2><small>Seçenek 2</small>Sınav Merkezi · Hızlı ve derli toplu</h2>
+        <p>Kurum, öğretmen ve bayinin aradığını en hızlı bulduğu düzen. Ana sayfada canlı deneme panosu: sıradaki sınava geri sayım, "Cevap anahtarı yayında" rozetleri, tek tıkla PDF. Her sayfada sabit arama çubuğu; lacivert ve elektrik sarısı.</p>
+        <div class="sw" aria-label="Renkler"><i style="background:#0F2C4C"></i><i style="background:#FFC21A"></i><i style="background:#F2F4F7"></i><i style="background:#17804F"></i></div>
+        <div class="screens"><a href="secenek-2/urunler.html">Katalog</a><a href="secenek-2/urun.html">Ürün</a><a href="secenek-2/denemeler.html">Denemeler</a><a href="secenek-2/mobil.html">Telefon</a></div>
+        <a class="btn" href="secenek-2/index.html">Seçenek 2'yi incele</a>
+      </div>
+    </article>
+    <article class="opt">
+      <a class="shot" href="secenek-3/index.html"><img src="thumbs/secenek-3.jpg" alt="Seçenek 3 ana sayfa görünümü"></a>
+      <div class="body">
+        <h2><small>Seçenek 3</small>Tesla Lab · Bir öğrenme sistemi</h2>
+        <p>Tesla'yı sadece kitap değil, kitap + video çözüm + yapay zekâ analizi olarak anlatır. Ana sayfada gerçek kapaklarla birlikte öğrencinin telefonunda açılan sınav karnesi. Telefonda uygulama gibi alt sekme çubuğu; öğrenci ve veliye yakın.</p>
+        <div class="sw" aria-label="Renkler"><i style="background:#0B1B33"></i><i style="background:#3BB7FF"></i><i style="background:#FF6B5A"></i><i style="background:#F5F8FC"></i></div>
+        <div class="screens"><a href="secenek-3/urunler.html">Katalog</a><a href="secenek-3/urun.html">Ürün</a><a href="secenek-3/denemeler.html">Denemeler</a><a href="secenek-3/mobil.html">Telefon</a></div>
+        <a class="btn" href="secenek-3/index.html">Seçenek 3'ü incele</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="block">
+    <h2>Nasıl inceleyebilirsiniz?</h2>
+    <div class="two">
+      <ol class="steps">
+        <li>Bir seçeneğin ana sayfasını açın; menüye, kitap kartlarına, sınıf seçicisine ve deneme takvimine tıklayarak gezin.</li>
+        <li>Her sayfanın sağ altındaki <b>Ekranlar</b> düğmesi, o seçeneğin on ekranını listeler: ana sayfa, ürün kataloğu, ürün detayı, deneme takvimi ve dokümanlar, kurumlara özel, eğitim teknolojileri, hakkımızda ve markalar, bayiler, iletişim, telefon görünümü.</li>
+        <li>Aynı ekranı üç seçenekte karşılaştırın; örneğin üçünün de "Deneme takvimi" sayfasına bakın.</li>
+        <li>Mümkünse hem telefondan hem bilgisayardan bakın; site iki ekranda da çalışacak şekilde tasarlandı.</li>
+      </ol>
+      <div class="note">
+        <b>Görüşünüzü nasıl iletebilirsiniz?</b>
+        <ul>
+          <li>WhatsApp'tan seçenek numarasını yazmanız yeterli: "Seçenek 2".</li>
+          <li>Karma da olur: "1'in renkleri, 2'nin deneme panosu".</li>
+          <li>Bir ekranda değişmesini istediğiniz şeyi ekran adıyla yazın: "Ana sayfada deneme takvimi daha yukarıda olsun".</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Telefon görünümü (PDF)</h2>
+    <p style="max-width:68ch;color:var(--muted)">Ziyaretçilerinizin çoğu siteye telefondan girecek. Her seçenek için sekiz telefon ekranı hazırladık: ana sayfa, açık menü, katalog ve filtre, ürün detayı, deneme takvimi ve PDF indirme, yapay zekâ analiz karnesi, bayi bul, iletişim. Üç seçeneğin tanıtımı ve telefon ekranları tek dosyada:</p>
+    <a class="pdf" href="Tesla-Yayinlari-On-Tasarim-ve-Mobil-Prototip.pdf">Tasarım ve telefon görünümü PDF'ini aç</a>
+  </section>
+
+  <section class="block">
+    <div class="note">
+      <b>Bilmeniz gerekenler</b>
+      <ul>
+        <li>Metinler, kitap kapakları, fiyatlar ve marka logoları mevcut sitenizden alındı. Deneme tarihleri, bayi adları, rapor ve karne rakamları örnektir.</li>
+        <li>Lise 9–12, AYT ve YDT setlerinin kapağı sitede olmadığı için bu kitaplarda sade yer tutucu kapak kullanıldı; gerçek kapaklar geldiğinde yerine konur.</li>
+        <li>CheckPoint, Deneme Vadisi, DenemeZsen ve Sınavcraft için kısa tanıtım cümlelerini biz yazdık; sizin metinlerinizle değiştiririz.</li>
+        <li>Fotoğraflar temsilidir ve yapay zekâ ile üretilmiştir; isterseniz kendi fotoğraflarınızla değiştiririz.</li>
+        <li>Ekranlar tıklanabilir ama formlar ve arama henüz çalışmaz. Seçtiğiniz yön yeni sitenin temeli olur; ince ayarları birlikte yaparız.</li>
+        <li>Bu adres geçicidir ve arama motorlarına kapalıdır; seçiminizden sonra kaldırılacaktır.</li>
+</ul>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">Ön tasarım · Tesla Yayınları web sitesi yenileme · Webizmo (webizmo.tr) · 05.10.2026</div></footer>
+</body>
+</html>
