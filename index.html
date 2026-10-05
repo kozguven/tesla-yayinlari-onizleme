@@ -45,16 +45,41 @@ ol.steps li::marker{font-weight:800;color:var(--accent-d)}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:14px}
 a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 @media (max-width:900px){.opts{grid-template-columns:1fr}.opt .shot{aspect-ratio:4/3}.two{grid-template-columns:1fr}}
+.final{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:2px solid var(--ink);border-radius:16px;overflow:hidden;margin:8px 0 34px;background:#fff}
+.final .shot{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--soft);border-right:1px solid var(--line)}
+.final .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.final .body{padding:26px 26px 28px;display:flex;flex-direction:column;gap:12px}
+.final h2{font-size:28px;line-height:1.15}.final h2 small{display:block;font-size:14px;font-weight:700;color:#17804F;margin-bottom:4px}
+.final p{color:var(--muted);font-size:16px}.final ul{padding-left:20px;color:var(--muted);font-size:15.5px;display:grid;gap:4px}
+.old{font-size:22px;margin:6px 0 4px}
+@media (max-width:900px){.final{grid-template-columns:1fr}.final .shot{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><span><b>Ön tasarım rehberi</b> · teslayayinlari.com.tr</span><span>Hazırlayan: Webizmo</span></div></header>
 <main class="wrap">
   <div class="intro">
-    <h1>teslayayinlari.com.tr için üç premium tasarım hazırladık</h1>
-    <p>Beytullah Bey, üç seçeneğin her biri Tesla Yayınları'nın yeni web sitesinin farklı bir yüzü. Mevcut sitenizdeki metinleri, gerçek kitap kapaklarınızı, fiyatlarınızı ve altı yayın markanızın logosunu kullandık. Her seçenekte ana sayfadan ürün kataloğuna, deneme takviminden bayi bulucuya kadar on ekran var; hepsi tıklanabilir, telefondan ya da bilgisayardan gezebilirsiniz.</p>
+    <h1>teslayayinlari.com.tr nihai tasarımı hazır</h1>
+    <p>Beytullah Bey, seçiminiz doğrultusunda nihai tasarımı hazırladık; hemen aşağıda. İlk üç seçenek karşılaştırma için sayfada duruyor. Üç seçeneğin her biri Tesla Yayınları'nın yeni web sitesinin farklı bir yüzü. Mevcut sitenizdeki metinleri, gerçek kitap kapaklarınızı, fiyatlarınızı ve altı yayın markanızın logosunu kullandık. Her seçenekte ana sayfadan ürün kataloğuna, deneme takviminden bayi bulucuya kadar on ekran var; hepsi tıklanabilir, telefondan ya da bilgisayardan gezebilirsiniz.</p>
   </div>
 
+  <article class="final">
+    <a class="shot" href="final/index.html"><img src="thumbs/final.jpg" alt="Nihai tasarım ana sayfa görünümü"></a>
+    <div class="body">
+      <h2><small>Seçiminiz doğrultusunda · 06.10.2026</small>Nihai tasarım</h2>
+      <p>Seçenek 2'nin sınav merkezi yapısı, Seçenek 1'in kurumsal ferahlığı ve Seçenek 3'ün teknoloji bileşenleri tek tasarımda.</p>
+      <ul>
+        <li>Ana sayfa sadeleşti; deneme panosunda sıradaki deneme ve en önemli üç satır kaldı.</li>
+        <li>Elektrik sarısı yalnız düğmelerde ve kritik uyarılarda; ana renk lacivert ve beyaz.</li>
+        <li>Yayınlarımız ve Kurumlara Özel sayfaları dergi tarzı premium dilde.</li>
+        <li>Eğitim Teknolojileri sayfasında yapay zekâ karnesi, video çözüm ve yakında gelecek hizmetler.</li>
+      </ul>
+      <div class="sw" aria-label="Renkler"><i style="background:#0F2C4C"></i><i style="background:#FFFFFF"></i><i style="background:#FFC21A"></i><i style="background:#F6F8FB"></i></div>
+      <div class="screens"><a href="final/urunler.html">Katalog</a><a href="final/denemeler.html">Denemeler</a><a href="final/yayinlarimiz.html">Yayınlarımız</a><a href="final/teknoloji.html">Teknoloji</a><a href="final/mobil.html">Telefon</a><a href="Tesla-Yayinlari-Nihai-Tasarim.pdf">PDF</a></div>
+      <a class="btn" href="final/index.html">Nihai tasarımı incele</a>
+    </div>
+  </article>
+  <h2 class="old">İlk üç seçenek</h2>
   <div class="opts">
     <article class="opt">
       <a class="shot" href="secenek-1/index.html"><img src="thumbs/secenek-1.jpg" alt="Seçenek 1 ana sayfa görünümü"></a>
